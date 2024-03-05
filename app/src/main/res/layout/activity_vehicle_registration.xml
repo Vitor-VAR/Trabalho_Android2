@@ -1,41 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".UserRegistration"
     android:padding="16dp"
+    android:background="#f5fffb"
     android:orientation="vertical">
+
+
     <TextView
+        android:id="@+id/tvCadatro_veiculo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Cadastro de veículo"
         android:textSize="30dp"/>
 
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:hint="Nome"
-        android:layout_marginTop="16dp"/>
+<LinearLayout
+    android:id="@+id/layout1"
+    android:layout_below="@+id/tvCadatro_veiculo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
 
     <EditText
+        android:id="@+id/etModelo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:hint="E-mail"
-        android:layout_marginTop="16dp"/>
+        android:layout_weight="2"
+        android:hint="Modelo"
+        android:padding="16dp" />
 
     <EditText
+        android:id="@+id/etMarca"
+        android:layout_width="286dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:hint="Marca"
+        android:padding="16dp" />
+
+
+</LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:layout_below="@+id/layout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:hint="Senha"
-        android:layout_marginTop="16dp"/>
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/etPlaca"
+            android:layout_below="@id/etAno"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_weight="4"
+            android:hint="Placa"
+            android:padding="16dp" />
+
+
+        <EditText
+            android:id="@+id/etAno"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_weight="3"
+            android:hint="Ano"
+            android:inputType="number"
+            android:padding="16dp" />
+
+        <EditText
+            android:id="@+id/etCor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_weight="3"
+            android:hint="Cor"
+            android:padding="16dp" />
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/etProprietario"
+        android:layout_below="@+id/layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Proprietário"
+        android:padding="16dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tiLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etProprietario">
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
 
     <Button
+        android:id="@+id/btCadatrar_veiculo"
+        android:layout_below="@id/etProprietario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
@@ -45,4 +115,4 @@
 
 
 
-</LinearLayout>
+</RelativeLayout>

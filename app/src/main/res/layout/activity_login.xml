@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,12 +7,10 @@
     tools:context=".Login"
     android:orientation="vertical"
     android:padding="16dp"
+    android:background="#f5fffb"
     android:layout_marginTop="50dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+
 
         <TextView
             android:id="@+id/tvLogin"
@@ -23,32 +21,44 @@
             android:gravity="center" />
 
         <EditText
-            android:id="@+id/etLogin"
+            android:id="@+id/etEmail"
+            android:layout_below="@+id/tvLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="16dp"
             android:layout_marginTop="16dp"
-            android:hint="Digite o seu email"/>
+            android:hint="Email"/>
 
         <EditText
             android:id="@+id/etPassword"
+            android:layout_below="@+id/etEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="16dp"
-            android:hint="Digite a sua senha"
+            android:hint="Senha"
             android:inputType="textPassword"/>
 
 
-    </LinearLayout>
-
     <Button
         android:id="@+id/bt_login"
+        android:layout_below="@id/etPassword"
         android:layout_marginTop="32dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/black"
         android:padding="16dp"
         android:textSize="18sp"
         android:text="LOGIN" />
 
+    <TextView
+        android:id="@+id/tvNovoUsuario"
+        android:layout_below="@id/bt_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Ainda não é cadastrado? Cadastre-se!"
+        />
 
-</LinearLayout>
+
+</RelativeLayout>
