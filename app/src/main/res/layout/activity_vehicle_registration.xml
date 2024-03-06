@@ -92,20 +92,18 @@
         android:hint="Proprietário"
         android:padding="16dp" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tiLayout"
+    <EditText
+        android:id="@+id/etObservacao"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/etProprietario">
-
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-
+        android:lines="3"
+        android:hint="Observação"
+        android:layout_below="@id/etProprietario"
+        />
 
     <Button
         android:id="@+id/btCadatrar_veiculo"
-        android:layout_below="@id/etProprietario"
+        android:layout_below="@id/etObservacao"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
