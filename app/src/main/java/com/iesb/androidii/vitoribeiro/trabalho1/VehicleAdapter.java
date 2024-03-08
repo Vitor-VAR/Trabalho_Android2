@@ -1,5 +1,7 @@
 package com.iesb.androidii.vitoribeiro.trabalho1;
 
+import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -8,9 +10,16 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class VehicleAdapter extends RecyclerView.Adapter<VehicleAdapter.NameViewHolder>{
+public class VehicleAdapter extends RecyclerView.Adapter<VehicleAdapter.ViewHolder>{
 
     private List<Vehicle> vehicles;
+    private Context context;
+
+    public VehicleAdapter( Context context, List<Vehicle> vehicles){
+
+        this.vehicles = vehicles;
+        this.context = context;
+    }
 
     public VehicleAdapter(List<Vehicle> vehicles){
 
@@ -20,12 +29,14 @@ public class VehicleAdapter extends RecyclerView.Adapter<VehicleAdapter.NameView
 
     @NonNull
     @Override
-    public VehicleAdapter.NameViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_vehicle, parent, false);
+        return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull VehicleAdapter.NameViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
     }
 
@@ -34,10 +45,10 @@ public class VehicleAdapter extends RecyclerView.Adapter<VehicleAdapter.NameView
         return 0;
     }
 
-    class NameViewHolder extends RecyclerView.ViewHolder{
+    class ViewHolder extends RecyclerView.ViewHolder{
 
 
-        public NameViewHolder(@NonNull View itemView) {
+        public ViewHolder(@NonNull View itemView) {
             super(itemView);
         }
     }

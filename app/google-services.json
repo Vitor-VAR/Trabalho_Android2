@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1060503684026",
+    "project_id": "trabalho1-android2",
+    "storage_bucket": "trabalho1-android2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1060503684026:android:ec857d5c610a3314f01383",
+        "android_client_info": {
+          "package_name": "com.iesb.androidii.vitoribeiro.trabalho1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAP2hChN2AEbQKzXO7v4IQlxWfpU8KXTGg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
