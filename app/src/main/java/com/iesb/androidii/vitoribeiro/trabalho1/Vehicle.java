@@ -2,6 +2,23 @@ package com.iesb.androidii.vitoribeiro.trabalho1;
 
 public class Vehicle {
 
+    private String model;
+    private  String brand;
+    private String year;
+    private String plate;
+    private String color;
+    private String ownerName;
+    private String idVehicle;
+    private String observation;
+
+    public String getObservation() {
+        return observation;
+    }
+
+    public void setObservation(String observation) {
+        this.observation = observation;
+    }
+
     public String getModel() {
         return model;
     }
@@ -50,12 +67,16 @@ public class Vehicle {
         this.ownerName = ownerName;
     }
 
-    private String model;
-    private  String brand;
-    private String year;
-    private String plate;
-    private String color;
-    private String ownerName;
+
+    public String getIdVehicle() {
+        return idVehicle;
+    }
+
+    public void setIdVehicle(String idVehicle) {
+        this.idVehicle = idVehicle;
+    }
+
+
 
 
 }

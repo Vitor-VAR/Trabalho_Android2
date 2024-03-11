@@ -10,60 +10,100 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="123dp"
             android:layout_weight="1"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="190dp"
-                android:layout_height="match_parent"
-                android:layout_weight="6"
+                android:layout_width="228dp"
+                android:layout_height="123dp"
                 android:gravity="center_vertical"
                 android:orientation="vertical"
                 android:paddingLeft="12dp">
 
                 <TextView
-                    android:id="@+id/tvNome_Home"
+                    android:id="@+id/tvModel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Teste do nome"
                     android:textSize="14dp" />
 
                 <TextView
-                    android:id="@+id/tvTel_Home"
+                    android:id="@+id/tvBrand"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Teste do nome"
                     android:textSize="14dp" />
 
                 <TextView
-                    android:id="@+id/tvEmail_Home"
+                    android:id="@+id/tvYear"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Teste do nome"
                     android:textSize="14dp" />
 
                 <TextView
-
+                    android:id="@+id/tvPlate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Teste do nome"
                     android:textSize="14dp" />
 
                 <TextView
-
+                    android:id="@+id/tvColor"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Teste do nome"
                     android:textSize="14dp" />
 
                 <TextView
+                    android:id="@+id/tvOwnerName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Teste do nome"
                     android:textSize="14dp" />
 
+                <TextView
+                    android:id="@+id/tvObservation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Teste do nome"
+                    android:textSize="14dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:columnCount="2">
+
+                    <Button
+                        android:id="@+id/btEdit"
+                        android:layout_width="80dp"
+                        android:layout_height="33dp"
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        android:text="Editar"
+                        android:textSize="10dp" />
+
+                    <Button
+                        android:id="@+id/btDelete"
+                        android:layout_width="80dp"
+                        android:layout_height="33dp"
+                        android:layout_row="0"
+                        android:layout_column="1"
+                        android:text="Excluir"
+                        android:textSize="10dp" />
+
+                </GridLayout>
 
             </LinearLayout>
 

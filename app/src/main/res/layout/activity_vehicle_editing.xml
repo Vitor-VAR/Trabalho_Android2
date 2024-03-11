@@ -1,9 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".VehicleEditing">
+    tools:context=".VehicleEditing"
+    android:padding="16dp"
+    android:background="#f5fffb"
+    android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/tvEditVehicle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Editar Veículo"
+        android:textSize="30dp"/>
+
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_below="@+id/tvEditVehicle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/etEditModel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:hint="Modelo"
+            android:padding="16dp" />
+
+        <EditText
+            android:id="@+id/etEditBrand"
+            android:layout_width="286dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:hint="Marca"
+            android:padding="16dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:layout_below="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/etEditPlate"
+            android:layout_below="@id/etEditYear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_weight="4"
+            android:hint="Placa"
+            android:padding="16dp" />
+
+
+        <EditText
+            android:id="@+id/etEditYear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_weight="3"
+            android:hint="Ano"
+            android:inputType="number"
+            android:padding="16dp" />
+
+        <EditText
+            android:id="@+id/etEditColor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_weight="3"
+            android:hint="Cor"
+            android:padding="16dp" />
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/etEditOwnerName"
+        android:layout_below="@+id/layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Proprietário"
+        android:padding="16dp" />
+
+    <EditText
+        android:id="@+id/etEditObservation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lines="3"
+        android:hint="Observação"
+        android:layout_below="@id/etEditOwnerName"
+        />
+
+    <Button
+        android:id="@+id/btAddVehicle"
+        android:layout_below="@id/etEditObservation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:textSize="18sp"
+        android:text="ATUALIZAR"
+        android:layout_marginTop="30dp"/>
+
+</RelativeLayout>

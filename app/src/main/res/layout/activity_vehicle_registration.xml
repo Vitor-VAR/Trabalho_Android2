@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UserRegistration"
+    tools:context=".VehicleRegistration"
     android:padding="16dp"
     android:background="#f5fffb"
     android:orientation="vertical">
 
 
     <TextView
-        android:id="@+id/tvCadatro_veiculo"
+        android:id="@+id/tvEditVehicle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Cadastro de veículo"
@@ -20,13 +20,13 @@
 
 <LinearLayout
     android:id="@+id/layout1"
-    android:layout_below="@+id/tvCadatro_veiculo"
+    android:layout_below="@+id/tvEditVehicle"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal">
 
     <EditText
-        android:id="@+id/etModelo"
+        android:id="@+id/etEditModel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="2"
@@ -34,7 +34,7 @@
         android:padding="16dp" />
 
     <EditText
-        android:id="@+id/etMarca"
+        android:id="@+id/etEditBrand"
         android:layout_width="286dp"
         android:layout_height="wrap_content"
         android:layout_weight="2"
@@ -52,8 +52,8 @@
         android:orientation="horizontal">
 
         <EditText
-            android:id="@+id/etPlaca"
-            android:layout_below="@id/etAno"
+            android:id="@+id/etEditPlate"
+            android:layout_below="@id/etEditYear"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -63,7 +63,7 @@
 
 
         <EditText
-            android:id="@+id/etAno"
+            android:id="@+id/etEditYear"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -73,7 +73,7 @@
             android:padding="16dp" />
 
         <EditText
-            android:id="@+id/etCor"
+            android:id="@+id/etEditColor"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -84,7 +84,7 @@
 
 
     <EditText
-        android:id="@+id/etProprietario"
+        android:id="@+id/etEditOwnerName"
         android:layout_below="@+id/layout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -93,17 +93,17 @@
         android:padding="16dp" />
 
     <EditText
-        android:id="@+id/etObservacao"
+        android:id="@+id/etEditObservation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:lines="3"
         android:hint="Observação"
-        android:layout_below="@id/etProprietario"
+        android:layout_below="@id/etEditOwnerName"
         />
 
     <Button
-        android:id="@+id/btCadatrar_veiculo"
-        android:layout_below="@id/etObservacao"
+        android:id="@+id/btAddVehicle"
+        android:layout_below="@id/etEditObservation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
