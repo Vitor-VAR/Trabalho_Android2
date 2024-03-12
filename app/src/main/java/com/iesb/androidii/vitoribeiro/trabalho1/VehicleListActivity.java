@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -18,11 +20,13 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class VehicleList extends AppCompatActivity implements VehicleAdapter.OnDeleteClickListener, VehicleAdapter.OnUpdateCLickListener {
+public class VehicleListActivity extends AppCompatActivity implements VehicleAdapter.OnDeleteClickListener, VehicleAdapter.OnUpdateCLickListener {
 
     private List<Vehicle> vehicleList = new ArrayList<>();
     private RecyclerView recyclerView;
     private VehicleAdapter vehicleAdapter;
+
+    private Button btAddVehicleList;
 
     private DatabaseReference databaseReference;
 
@@ -32,6 +36,8 @@ public class VehicleList extends AppCompatActivity implements VehicleAdapter.OnD
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vehicle_list);
+
+        btAddVehicleList = findViewById(R.id.btAddVehicleList);
 
         recyclerView = findViewById(R.id.recyclerView);
         vehicleAdapter = new VehicleAdapter(this,vehicleList, this,this);
@@ -63,6 +69,12 @@ public class VehicleList extends AppCompatActivity implements VehicleAdapter.OnD
 
 //        vehicleAdapter.notifyItemInserted(vehicleList.size()-1);
 //        System.out.println("Veículos" + vehicleList.size());
+        btAddVehicleList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(VehicleListActivity.this, VehicleRegistration.class));
+            }
+        });
 
     }
     private void alerta(String menssagem){

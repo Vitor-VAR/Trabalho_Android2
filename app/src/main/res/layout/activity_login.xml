@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login"
+    tools:context=".LoginActivity"
     android:orientation="vertical"
     android:padding="16dp"
     android:background="#f5fffb"
@@ -40,7 +40,7 @@
 
 
     <Button
-        android:id="@+id/bt_login"
+        android:id="@+id/btLogin"
         android:layout_below="@id/etPassword"
         android:layout_marginTop="32dp"
         android:layout_width="match_parent"
@@ -52,7 +52,7 @@
 
     <TextView
         android:id="@+id/tvNovoUsuario"
-        android:layout_below="@id/bt_login"
+        android:layout_below="@id/btLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
        android:layout_centerHorizontal="true"

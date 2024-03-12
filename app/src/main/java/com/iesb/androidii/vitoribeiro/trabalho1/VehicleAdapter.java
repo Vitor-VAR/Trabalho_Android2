@@ -113,6 +113,7 @@ public class VehicleAdapter extends RecyclerView.Adapter<VehicleAdapter.ViewHold
         void onUpdateClick(int position);
     }
 
+
     }
 
 

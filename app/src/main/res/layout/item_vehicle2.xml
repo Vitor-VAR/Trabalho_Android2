@@ -4,7 +4,7 @@
     android:orientation="vertical">
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="398dp"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
@@ -15,40 +15,41 @@
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
-            <LinearLayout
-                android:layout_width="225dp"
+            <GridLayout
+                android:layout_width="wrap_content"
                 android:layout_height="180dp"
+                android:layout_marginHorizontal="2dp"
+                android:columnCount="2"
                 android:gravity="center_vertical"
-                android:orientation="vertical"
-                android:paddingLeft="12dp">
+                android:paddingLeft="0dp">
 
                 <TextView
                     android:id="@+id/tvModel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Teste do nome"
-                    android:textSize="14dp" />
+                    android:textSize="12dp" />
 
                 <TextView
                     android:id="@+id/tvBrand"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Teste do nome"
-                    android:textSize="14dp" />
+                    android:textSize="12dp" />
 
                 <TextView
                     android:id="@+id/tvYear"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Teste do nome"
-                    android:textSize="14dp" />
+                    android:textSize="12dp" />
 
                 <TextView
                     android:id="@+id/tvPlate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Teste do nome"
-                    android:textSize="14dp" />
+                    android:textSize="12dp" />
 
                 <TextView
                     android:id="@+id/tvColor"
@@ -72,7 +73,7 @@
                     android:textSize="14dp" />
 
 
-            </LinearLayout>
+            </GridLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
