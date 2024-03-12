@@ -3,6 +3,7 @@ package com.iesb.androidii.vitoribeiro.trabalho1;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -24,5 +25,16 @@ public class VehicleEditing extends AppCompatActivity {
         etEditOwnerName = findViewById(R.id.etEditOwnerName);
         etEditObservation = findViewById(R.id.etEditObservation);
 
+        btAddVehicle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+    }
+    private void vehicleUpdate(){
+        Vehicle vehicle = new Vehicle();
+        vehicle.setModel(etEditModel.getText().toString());
     }
 }

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -81,6 +82,30 @@ public class VehicleList extends AppCompatActivity implements VehicleAdapter.OnD
 
     @Override
     public void onUpdateClick(int position) {
+        openUpdate(position);
+
+    }
+    public void openUpdate(int position){
+        String idVehicle = vehicleList.get(position).getIdVehicle();
+        String vehicleModel = vehicleList.get(position).getModel();
+        String vehicleBrand = vehicleList.get(position).getBrand();
+        String vehiclePlate = vehicleList.get(position).getPlate();
+        String vehicleYear = vehicleList.get(position).getYear();
+        String vehicleColor = vehicleList.get(position).getColor();
+        String vehicleOwnerName = vehicleList.get(position).getOwnerName();
+        String vehicleObservation = vehicleList.get(position).getObservation();
+
+        Intent intent = new Intent(this, VehicleEditing.class);
+
+        intent.putExtra("VEHICLE_ID", idVehicle);
+        intent.putExtra("VEHICLE_MODEL", vehicleModel);
+        intent.putExtra("VEHICLE_BRAND", vehicleBrand);
+        intent.putExtra("VEHICLE_PLATE", vehiclePlate);
+        intent.putExtra("VEHICLE_YEAR", vehicleYear);
+        intent.putExtra("VEHICLE_COLOR", vehicleColor);
+        intent.putExtra("VEHICLE_OWNER", vehicleOwnerName);
+        intent.putExtra("VEHICLE_OBSERVATION", vehicleObservation);
+        startActivity(intent);
 
     }
 }
